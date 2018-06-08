@@ -1,0 +1,62 @@
+#app
+{
+    background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    min-height: 770px;
+}
+
+p.form-title
+{
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+// Sidebar styles
+$black: #343838;
+$blue: #00DFFC;
+$dullWhite: #FFFFFF;
+$easing: cubic-bezier(.6, .05, .28, .91);
+
+#box {
+    z-index: 4;
+    overflow: auto;
+    top: 0px;
+    left: -275px;
+    width: 275px;
+    opacity: 0;
+    padding: 0px 0px 20px;
+    height: 100%;
+    background-color: $dullWhite;
+    color: $black;
+    transition: all 350ms $easing;
+}
+
+#box.active {
+    left: 0px;
+    opacity: 1;
+}
+
+#items {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    .item {
+        position: relative;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 15px 30px;
+        transition: all 250ms;
+        &:hover {
+            padding: 15px 45px;
+            background-color: transparentize($black, .8);
+        }
+    }
+}
