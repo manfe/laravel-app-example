@@ -3,6 +3,12 @@ language: php
 php:
   - '7.2'
 
+services:
+  - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE laravel_example_test;'
+
 before_script:
   - cp .env.travis .env
   - composer self-update
@@ -13,6 +19,3 @@ script:
   - php artisan key:generate
   - php artisan migrate
   - vendor/bin/phpunit
-
-services:
-  - mysql
