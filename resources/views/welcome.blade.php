@@ -8,7 +8,7 @@
                     <div class="wrap">
                         <p class="form-title">Testes em Aplicações Web</p>
 
-                        <p class="form-title">Laravel + Travis CI</p>
+                        <p class="form-title">Laravel + Testes</p>
                     </div>
                 </div>
             </div>

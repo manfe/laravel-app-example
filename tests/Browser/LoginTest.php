@@ -16,7 +16,7 @@ class LoginTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertSee('LARAVEL + TRAVIS CI');
+                    ->assertSee('LARAVEL + TESTES');
 
 
             $browser->clickLink('Entrar')

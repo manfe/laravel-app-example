@@ -42,13 +42,11 @@ class ProductTest extends DuskTestCase
             $product = factory(Product::class)->create();
             
             $browser->loginAs($user);
-
             $browser->visit('/products');
 
             $browser->assertSee('Salada');
             
             $browser->press('#delete-1');
-
             $browser->acceptDialog();
 
             $browser->assertSee("Produto excluído com sucesso.");
